@@ -1,17 +1,12 @@
-//globle variables
 var wins = 0;
 var losses = 0;
-//players currunt score
 var addition = 0;
-//selects a random number from 19 t0 120
 var total = Math.floor((Math.random()* 100) + 19);
-//assigns random value to crystals from 1-12
 var red = Math.floor((Math.random()* 12) + 1);
 var blue = Math.floor((Math.random()* 12) + 1);
 var yellow = Math.floor((Math.random()* 12) + 1);
 var green = Math.floor((Math.random()* 12) + 1);
 
-//updates addition in html
 var updateAddition = function (){
 	$('.addition').empty();
 	$('.addition').append(addition);
@@ -20,7 +15,7 @@ var updateAddition = function (){
 	$('#losses').empty();
 	$('#losses').append(losses);
 }
-//restart function
+
 var restart = function(){
 	addition = 0;
     total = Math.floor((Math.random()* 100) + 19);
@@ -51,7 +46,6 @@ var logic = function (){
 $('.total').append(total);
 
 $('.addition').append(addition);
-//function
 
 $(document).ready(function(){
 	$('#red').click(function(){
